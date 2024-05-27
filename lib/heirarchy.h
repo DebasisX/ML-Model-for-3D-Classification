@@ -12,5 +12,15 @@ typedef struct tree
 
 // write code to insert nodes, 
 // search for an input in range lowest->input and highest->input, 
-// (also handle cases where in the initial stages the tree hasn't grown much). 
+// (also handle cases where in the initial stages the tree hasn't grown much) 
 // if found return the output.
+
+void insert_tree()
+{
+    
+}
+int retrieve()
+{
+
+}
+// These are only functions we need for now. Scaling can be done later.
