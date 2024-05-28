@@ -28,18 +28,18 @@ To use this template
 
 typedef struct node
 {
-    int data;
+    double data;
     struct node *next;
 } node;
 
-void insert_head(node **head_ref, int new_data)
+void insert_head(node **head_ref, double new_data)
 {
     node *new_node = (node *)malloc(sizeof(node));
     new_node->data = new_data;
     new_node->next = (*head_ref);
     (*head_ref) = new_node;
 }
-void insert(node **head_ref, int new_data)
+void insert(node **head_ref, double new_data)
 {
     node *new_node = (node *)malloc(sizeof(node));
     new_node->data = new_data;
@@ -59,7 +59,7 @@ void insert(node **head_ref, int new_data)
     last->next = new_node;
 }
 
-void del_node(node **head_ref, int del)
+void del_node(node **head_ref, double del)
 {
     node *temp = *head_ref, *prev;
     if (temp != NULL && temp->data == del)
@@ -82,7 +82,7 @@ void display(node **head_ref)
     node *temp = *head_ref;
     while (temp != NULL)
     {
-        printf("%d ", temp->data);
+        printf("%lf ", temp->data);
         temp = temp->next;
     }
     free(temp);
@@ -110,7 +110,7 @@ void reverse(node **head_ref)
 void asc_sort(node **head_ref)
 {
     node *current, *index;
-    int temp;
+    double temp;
 
     if (*head_ref == NULL)
     {
@@ -138,7 +138,7 @@ void asc_sort(node **head_ref)
 void desc_sort(node **head_ref)
 {
     node *current, *index;
-    int temp;
+    double temp;
 
     if (*head_ref == NULL)
     {
@@ -163,10 +163,10 @@ void desc_sort(node **head_ref)
     free(index);
 }
 
-int element(node **head_ref, int pos)
+double element(node **head_ref, double pos)
 {
     node *temp = *head_ref;
-    int i = 0;
+    double i = 0;
 
     while (temp != NULL)
     {
@@ -181,7 +181,7 @@ int element(node **head_ref, int pos)
     free(temp);
     return 0;
 }
-void insert_pos(node **head_ref, int pos, int new_data)
+void insert_pos(node **head_ref, double pos, double new_data)
 {
     node *temp = *head_ref;
     node *new_node = (node *)malloc(sizeof(node));
@@ -195,7 +195,7 @@ void insert_pos(node **head_ref, int pos, int new_data)
         return;
     }
 
-    for (int i = 0; temp != NULL && i < pos - 1; i++)
+    for (double i = 0; temp != NULL && i < pos - 1; i++)
     {
         temp = temp->next;
     }
@@ -210,7 +210,7 @@ void insert_pos(node **head_ref, int pos, int new_data)
     temp->next = new_node;
 }
 
-void del_pos(node **head_ref, int pos)
+void del_pos(node **head_ref, double pos)
 {
     if (*head_ref == NULL)
         return;
@@ -224,7 +224,7 @@ void del_pos(node **head_ref, int pos)
         return;
     }
 
-    for (int i = 0; temp != NULL && i < pos - 1; i++)
+    for (double i = 0; temp != NULL && i < pos - 1; i++)
     {
         temp = temp->next;
     }
