@@ -16,10 +16,12 @@ typedef struct htree {
 // if found return the output.
 double prob = _MAX_;
 double node_value = _MAX_;
+double node_output = _MAX_;
 void reset() // Call this after a probability test. to re-initialize the global values.
 {
     prob = _MAX_;
     node_value = _MAX_;
+    node_output = _MAX_;
 }
 double lowest_probability(struct htree* root, double search)
 {
@@ -30,11 +32,11 @@ double lowest_probability(struct htree* root, double search)
         {
             prob = fabs(search - root->input);
             node_value = root->input;
+            node_output = root->output;
         }
         lowest_probability(root->highest, search);
     }
-    
-    return prob;
+    return node_output;
 }
 
 // These are only functions we need for now. Scaling can be done later.
