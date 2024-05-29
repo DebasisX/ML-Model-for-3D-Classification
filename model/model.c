@@ -140,16 +140,13 @@ int main()
     printf("Enter an Input to TEST: ");
     double test_input = 0;
     scanf("%lf", &test_input);
-    double closest = _MAX_;
+    double closest = _MAX_;   
     for(int i = 0; i < no_of_output; i++)
     {  
-        double temp = lowest_probability(root[i], test_input);
-        if(closest >= temp) 
-        {
-            closest = temp;
-        }
+        closest = lowest_probability(root[i], test_input);
     }
-    printf("Closest: %lf\n", closest); // Updated.
+    // Updated.
+    printf("Closest: %lf\n", closest);
     
     // Determine accuracy.
     
