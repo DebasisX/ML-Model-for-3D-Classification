@@ -1,4 +1,4 @@
-# Advanced-ML-model
+# ML-model in C
 Adaptive Hierarchical Classification Model with Dynamic Ranging.
 
 
