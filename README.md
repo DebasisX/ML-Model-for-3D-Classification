@@ -8,6 +8,14 @@ mentioning the conditions where the model has to learn some anomalies.
 
 This currently supports training and testing on single inputs, it is a multiple output classifier model.
 
+# Update:
+---------
+- Added support for higher dimensions. I've developed the idea for 3D classification 
+but it can be scaled to further higher dimensions just by adding in more feature inputs and using similar logic.
+- Added the PDF of the idea.
+- Further implementation will be done in Python or it will get more complex and will be more prone to errors.
+- Currently writing the code for the idea. Will be up in some time.
+  
 Example usage:
 
 Get yourself a dataset.csv with io pairs.
