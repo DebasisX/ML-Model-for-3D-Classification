@@ -1,4 +1,4 @@
-# ML-model in C
+# ML-model in Python and C 
 Adaptive Hierarchical Classification Model with Dynamic Ranging.
 
 
