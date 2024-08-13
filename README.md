@@ -1,12 +1,12 @@
-# ML-model in C
+# ML-model in Python and C 
 Adaptive Hierarchical Classification Model with Dynamic Ranging.
 
 
 This is going to be quite an intensive project, as I am working solo.
-So I wouldn't try to hurry it up. Till now the template is ready and have updated the PDF
-mentioning the conditions where the model has to learn some anomalies. 
+This project is divided into two parts one in C for single featured classification.
+Another is using Python3 for Hyperspace(x, y, z) IO pairs, which is in the hyperspace directory. 
 
-This currently supports training and testing on single inputs, it is a multiple output classifier model.
+This currently supports training and testing on both single and 3D inputs, it is a multiple output classifier model.
 
 # Update:
 ---------
@@ -22,7 +22,10 @@ Get yourself a dataset.csv with io pairs.
 and place it in dataset/dataset.csv.
 
 Go into the model dir,
-run ./model.exe
+run ./model.exe (for single featured)
+run python3 start.py (for 3D io pairs.)
 
 Test on different inputs.
+Both have great accuracy as they adapt when trained.
+
 Thank You.
