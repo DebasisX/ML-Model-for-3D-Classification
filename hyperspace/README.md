@@ -1,4 +1,4 @@
-# Adaptive Ranged Based 3D Classification Model 
+# Adaptive Ranged Based Hyperspace Classification Model 
 
 1. Splitting of data and adaptation to dynamic ranges is performed while the process.
 2. Data is Loaded
@@ -10,7 +10,8 @@ Space Complexity = ls: 𝑂(𝑛), model: 𝑂(𝑚), where 𝑚 can approach �
 
 Test Result: 
 Upon training with 1000 datapoints for the current dataset we get 182 ranges.
-
+Previous: (Currently beats kNN, check udpated folder)
+---------
 Training time: 
     real    0m5.866s
     user    0m4.658s
