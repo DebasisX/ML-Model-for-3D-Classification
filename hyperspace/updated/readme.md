@@ -50,6 +50,52 @@ Model Trained
 Model Accuracy: 99.70%
 Elapsed time: 0.001699686050415039 seconds
 
+TEST 3:
+-------
+Iris Dataset:
+-------------
+
+(Incinerate-X) debasis@Debasis:~/project/temp$ python3 start.py
+Enter no. of training samples: 75
+Enter no. of test samples: 75
+Enter number of features: 4
+Model Trained
+Model Accuracy: 97.33%
+Time: 0.0003380775451660156 seconds
+
+(Incinerate-X) debasis@Debasis:~/project/temp$ python3 start2.py
+Enter the training set (number of samples): 75
+Enter the test set (number of samples): 75
+Logistic Regression Accuracy: 94.67%
+Elapsed time: 0.02 seconds
+Random Forest Accuracy: 93.33%
+Elapsed time: 0.09 seconds
+Support Vector Machine Accuracy: 94.67%
+Elapsed time: 0.00 seconds
+K-Nearest Neighbors Accuracy: 93.33%
+Elapsed time: 0.01 seconds
+
+High-Dimensional Classification:
+--------------------------------
+Enter the training set (number of samples): 500
+Enter the test set (number of samples): 500
+Logistic Regression Accuracy: 59.20%
+Elapsed time: 0.03 seconds
+Random Forest Accuracy: 71.40%
+Elapsed time: 0.29 seconds
+Support Vector Machine Accuracy: 76.20%
+Elapsed time: 0.02 seconds
+K-Nearest Neighbors Accuracy: 65.00%
+Elapsed time: 0.03 seconds
+
+Enter no. of training samples: 500
+Enter no. of test samples: 500
+Enter number of features: 50
+Model Trained
+Model Accuracy: 66.60%
+Time: 0.013143777847290039 seconds
+
+
 Advantages:
 -----------
 Lowest Runtime and a Great Accuracy.
