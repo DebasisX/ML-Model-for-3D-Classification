@@ -112,11 +112,39 @@ def accuracy(model, data):
     return (acc / total) * 100
 
 # Main execution
-train_data = load_dataset("dataset.csv", 100)
-test_data = load_dataset("dataset.csv", 100)
+print("Enter I/O: ")
+inp = int(input())
+out = int(input())
+
+train_data = load_dataset("dataset.csv", inp)
+test_data = load_dataset("dataset.csv", inp)
 
 model = train_model(train_data)
 print("Data Loaded and Model Trained")
-print("Model:", model)
+
+# I have the ranges of the model and would like to export the ranges as a csv
 print("Number of Ranges:", len(model))
 print("Model Accuracy:", accuracy(model, test_data))
+
+import csv
+
+# Function to save the model to a CSV file
+def save_model_to_csv(model, filename):
+    # Define the header for the CSV file
+    header = ['X_min', 'X_max', 'Y_min', 'Y_max', 'Z_min', 'Z_max', 'Result']
+    
+    # Open the file in write mode
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        
+        # Write the header
+        writer.writerow(header)
+        
+        # Write each range of the model to the file
+        for entry in model:
+            row = [entry[0][0], entry[0][1], entry[1][0], entry[1][1], entry[2][0], entry[2][1], entry[3]]
+            writer.writerow(row)
+
+# Save the model to a CSV file
+save_model_to_csv(model, "model_ranges.csv")
+print("Model ranges exported to model_ranges.csv")
